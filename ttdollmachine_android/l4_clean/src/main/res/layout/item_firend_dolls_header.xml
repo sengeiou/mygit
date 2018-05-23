@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_2">
+
+    <ImageView
+        android:id="@+id/img_user_header"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        tools:src="@drawable/base_head_default"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/img_user_header"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共抓中%s次"
+            android:textColor="@color/font_white"/>
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            tools:text="ID：23423423"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

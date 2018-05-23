@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.beanu.l4_clean.ui.game.GameActivity">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--直播区域-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/video_fragment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.pili.pldroid.player.widget.PLVideoTextureView
+                        android:id="@+id/PLVideoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                    </com.pili.pldroid.player.widget.PLVideoTextureView>
+
+
+                    <FrameLayout
+                        android:id="@+id/RemoteWindowA"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <android.opengl.GLSurfaceView
+                            android:id="@+id/RemoteGLSurfaceViewA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/RemoteWindowB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <android.opengl.GLSurfaceView
+                            android:id="@+id/RemoteGLSurfaceViewB"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </FrameLayout>
+
+
+                    <ImageView
+                        android:id="@+id/img_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_crawer_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="66dp"
+                    android:background="@drawable/people_catch_bg"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/video_fragment"
+                    app:layout_constraintTop_toTopOf="@+id/video_fragment">
+
+
+                    <ImageView
+                        android:id="@+id/img_crawer_avatar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/base_dafualt_head"/>
+
+                    <TextView
+                        android:id="@+id/txt_crawer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/img_crawer_avatar"
+                        android:layout_marginStart="6dp"
+                        android:layout_toEndOf="@+id/img_crawer_avatar"
+                        android:text="姑娘"
+                        android:textColor="@color/font_white"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_crawer_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/txt_crawer_name"
+                        android:layout_below="@+id/txt_crawer_name"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="2dp"
+                        android:text="热抓中"
+                        android:textColor="@color/font_white"
+                        android:textSize="10sp"/>
+
+
+                </RelativeLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <!--直播 上面的功能-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/info_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Space
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="460dp"/>
+
+
+                <ImageView
+                    android:id="@+id/img_loading"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/loading1"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/space"
+                    app:layout_constraintEnd_toEndOf="@+id/space"
+                    app:layout_constraintStart_toStartOf="@+id/space"
+                    app:layout_constraintTop_toTopOf="@+id/space"/>
+
+                <!--去掉-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_view_message"
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/space"
+                    app:layout_constraintEnd_toEndOf="@+id/space"
+                    app:layout_constraintStart_toStartOf="@+id/space"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+                <ImageView
+                    android:id="@+id/img_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/space"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/space"
+                    app:srcCompat="@drawable/changecareme"/>
+
+                <!--去掉-->
+                <ImageView
+                    android:id="@+id/img_message_control"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/space"
+                    app:layout_constraintStart_toStartOf="@+id/space"
+                    app:srcCompat="@drawable/shouqi"/>
+
+
+                <ImageView
+                    android:id="@+id/img_music_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/music"
+                    app:layout_constraintBottom_toBottomOf="@+id/space"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+                <ImageView
+                    android:id="@+id/ll_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:src="@drawable/chongzhi"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_loading"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+
+                <ImageView
+                    android:id="@+id/img_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:src="@drawable/fault"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_charge"
+                    app:layout_constraintEnd_toEndOf="@+id/ll_charge"
+                    app:layout_constraintStart_toStartOf="@+id/ll_charge"/>
+
+                <master.flame.danmaku.ui.widget.DanmakuView
+                    android:id="@+id/danmaku_view"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_fragment"
+                android:orientation="vertical">
+
+                <!--控制区域1-->
+                <RelativeLayout
+                    android:id="@+id/rl_control1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:id="@+id/btn_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/comment"/>
+
+                    <LinearLayout
+                        android:id="@+id/btn_begin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/btn_start_selector"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:text="开始游戏"
+                            android:textColor="@color/font_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txt_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="19币/次"
+                            android:textColor="@color/font_white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/button_wawabi"
+                        >
+
+                        <ImageView
+                            android:id="@+id/image_avatar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:src="@drawable/base_dafualt_head"/>
+
+                        <TextView
+                            android:id="@+id/txt_my_bi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@id/image_avatar"
+                            android:text="我的娃娃币"
+                            android:textColor="@color/font_white"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/txt_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/txt_my_bi"
+                            android:layout_below="@id/txt_my_bi"
+                            android:drawableLeft="@drawable/gold"
+                            android:text="2300"
+                            android:textColor="@color/font_white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <!--控制区域2-->
+                <include layout="@layout/layout_control_game"/>
+
+                <!--介绍+中奖区域-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="同款列表"
+                        android:textSize="16sp"/>
+
+                    <FrameLayout
+                        android:id="@+id/fragment_same"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        >
+
+                    </FrameLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/zhuazhongjilu"
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/fragment_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp">
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/wawaphoto"
+                        />
+
+
+                    <FrameLayout
+                        android:id="@+id/fragment_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--标题-->
+            <include
+                android:id="@+id/game_toolbar"
+                layout="@layout/game_toolbar"/>
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:gravity="bottom"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E9E9E9">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:text="发送"
+                />
+
+            <EditText
+                android:id="@+id/edit_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/btn_send"
+                android:background="@null"
+                android:hint="想说点什么"
+                android:minHeight="50dp"
+                android:paddingLeft="16dp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

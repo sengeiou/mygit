@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.beanu.l3_shoppingcart"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".PlaceOrderActivity"
+            android:label="@string/title_activity_place_order"
+            android:theme="@style/Cart_AppTheme">
+        </activity>
+        <activity android:name=".AddressChooseActivity">
+        </activity>
+        <activity android:name=".AddressAddOrUpdateActivity">
+        </activity>
+        <activity android:name=".CartPayActivity">
+        </activity>
+    </application>
+
+</manifest>

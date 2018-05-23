@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg"
+    android:orientation="vertical"
+    tools:context="com.beanu.l4_clean.ui.anchor.AnchorApplyActivity">
+
+    <include
+        layout="@layout/arad_toolbar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    style="@style/style_edit_text"
+                    android:hint="输入真实的姓名"/>
+
+                <View
+                    style="@style/base_line_horizontal"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/radio_group_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="48dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_sex_boy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/choose_radio_sex"
+                        android:paddingLeft="8dp"
+                        android:text="男"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_sex_girl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="32dp"
+                        android:button="@drawable/choose_radio_sex"
+                        android:checked="true"
+                        android:paddingLeft="8dp"
+                        android:text="女"/>
+
+                </RadioGroup>
+
+                <View
+                    style="@style/base_line_horizontal"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_phone"
+                    style="@style/style_edit_text"
+                    android:inputType="phone"
+                    android:hint="输入手机号码"/>
+
+                <View
+                    style="@style/base_line_horizontal"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_id"
+                    style="@style/style_edit_text"
+                    android:hint="输入身份证号"/>
+
+                <View
+                    style="@style/base_line_horizontal"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_profession"
+                    style="@style/style_edit_text"
+                    android:hint="输入您的职业"/>
+
+                <View
+                    style="@style/base_line_horizontal"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="上传直播封面"
+                    android:textColor="@color/base_font_black"/>
+
+                <ImageView
+                    android:id="@+id/img_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/addfengmian_shenqing"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="请保证照片的清晰度，不得涉及淫秽色情"
+                    android:textColor="#b8b8b8"/>
+
+                <View
+                    style="@style/base_line_horizontal"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="上传身份证照片"
+                    android:textColor="@color/base_font_black"/>
+
+                <ImageView
+                    android:id="@+id/img_card_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/zhengmian"/>
+
+                <ImageView
+                    android:id="@+id/img_card_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/fanmian"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

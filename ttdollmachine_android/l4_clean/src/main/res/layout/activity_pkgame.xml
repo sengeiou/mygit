@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.beanu.l4_clean.ui.pk.PKGameActivity">
+
+    <FrameLayout
+        android:id="@+id/PLVideoView_ME"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/RemoteGLSurfaceViewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/RemoteWindowB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/RemoteGLSurfaceViewB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/img_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jiazaitupian"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/PLVideoView_ME"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PLVideoView_ME"
+        app:srcCompat="@drawable/change_camera"/>
+
+
+    <ImageButton
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/delete"/>
+
+
+    <com.pili.pldroid.player.widget.PLVideoTextureView
+        android:id="@+id/PLVideoView_Other"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.pili.pldroid.player.widget.PLVideoTextureView>
+
+
+    <TextView
+        android:id="@+id/txt_times_other"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/board_transparent_black"
+        android:gravity="center"
+        android:text="第1次"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/PLVideoView_Other"
+        app:layout_constraintEnd_toEndOf="@id/PLVideoView_Other"
+        app:layout_constraintStart_toStartOf="@id/PLVideoView_Other"
+        />
+
+    <TextView
+        android:id="@+id/txt_other_win"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="对方已抓中娃娃"
+        android:textColor="@color/font_white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/PLVideoView_Other"
+        app:layout_constraintEnd_toEndOf="@id/PLVideoView_Other"
+        app:layout_constraintStart_toStartOf="@id/PLVideoView_Other"
+        app:layout_constraintTop_toTopOf="@id/PLVideoView_Other"/>
+
+    <TextView
+        android:id="@+id/txt_times_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/board_round30_ransparent_black"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="第1次"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/PLVideoView_ME"
+        app:layout_constraintEnd_toEndOf="@id/PLVideoView_ME"/>
+
+    <ImageView
+        android:id="@+id/img_avatar_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/PLVideoView_Other"
+        app:layout_constraintStart_toStartOf="@+id/PLVideoView_Other"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/base_head_default"/>
+
+    <ImageView
+        android:id="@+id/img_music_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/music"
+        app:layout_constraintBottom_toTopOf="@+id/txt_times_me"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+
+        <TextView
+            android:id="@+id/txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="对方已准备"
+            android:textColor="@color/font_white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <!--控制区域-->
+        <include
+            layout="@layout/layout_control_game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_continue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_green"
+                android:text="继续比赛（30s）"
+                android:textColor="@color/font_white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/btn_continue"
+                android:layout_marginEnd="8dp"
+                android:text="每次：19币"
+                android:textColor="@color/font_white"/>
+
+            <TextView
+                android:id="@+id/txt_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/txt_price"
+                android:layout_below="@+id/txt_price"
+                android:layout_marginTop="17dp"
+                android:text="余额：23币"
+                android:textColor="@color/font_white"/>
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/container"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp">
+
+    <TextView
+        android:id="@+id/currency"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/gold_big"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/base_font_black"
+        android:textSize="14sp"
+        tools:text="50T币"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/board_round30_blue_kuang"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:textColor="@color/color_price"
+        android:textSize="16sp"
+        tools:text="¥ 6.00"/>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/price"
+        android:layout_toRightOf="@id/currency"
+        android:textColor="@color/font_gray2"
+        android:textSize="12sp"
+        tools:text="赠送1张免费卡"/>
+
+</RelativeLayout>

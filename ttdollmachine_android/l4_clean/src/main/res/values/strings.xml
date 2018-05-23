@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TT抓娃娃</string>
+    <string name="jump_over_0s">跳过</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ready">就绪</string>>
+    <string name="failed_open_camera">无法打开摄像头 !</string>
+    <string name="failed_open_microphone">无法打开麦克风 !</string>
+    <string name="failed_to_publish_av_to_rtc">无法发布视频到房间, 错误码：</string>
+    <string name="failed_to_connect_rtc_server">无法连接RTC服务器 ！</string>
+    <string name="success_publish_video_to_rtc">成功发布视频到房间 !</string>
+    <string name="success_publish_audio_to_rtc">成功发布音频到房间 !</string>
+    <string name="user_join_other_where">用户在其它地方登录 ！</string>
+    <string name="user_kickout_by_host">您被主持人踢出房间 ！</string>
+    <string name="start_conference">开始连麦</string>
+    <string name="stop_conference">结束连麦</string>
+    <string name="failed_to_start_conference">无法成功开启连麦，错误码：</string>
+
+    <string name="txt_grab_fail">其他玩家先你抢到机器\n再耐心等到一会吧～</string>
+    <string name="txt_craw_fail">表放弃，只差一点点~</string>
+    <string name="txt_craw_success">恭喜你抓中了娃娃</string>
+    <string name="txt_balance_bot_enough">您的开心币余额不足，先去充值吧~</string>
+
+
+    <string name="code018">余额不足，请充值</string>
+    <string name="code019">获取记录失败</string>
+    <string name="code025">兑换失败，您已经兑换过</string>
+    <string name="title_activity_help">HelpActivity</string>
+
+
+</resources>

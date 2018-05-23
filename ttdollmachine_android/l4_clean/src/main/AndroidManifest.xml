@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.beanu.l4_clean"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 七牛播放端 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!-- 系统相关 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <application
+        android:name=".L4Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 下载服务 -->
+        <service
+            android:name="com.beanu.arad.support.updateversion.DownloadService"
+            android:exported="true"/>
+
+        <provider
+            android:name="com.beanu.arad.support.updateversion.ApkFileProvider"
+            android:authorities="${applicationId}.install"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/apk_path"/>
+        </provider>
+
+        <activity
+            android:name=".ui.StartActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.VideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.game.GameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.UserCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.anchor.AnchorListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.UserInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.ModifyUserInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.RechargeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.BillActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.shop.ExchangeRecordsListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.MyDollsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.MyMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.pk.ChallengeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.anchor.AnchorPlayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.anchor.AnchorLivingSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.anchor.AnchorLivingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.FeedbackActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.ShareActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.PKDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.pk.InvitationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.pk.PKChooseDollActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.pk.PKGameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.ConfirmOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.SetAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.OrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.game.GameMachineListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service
+            android:name=".support.service.BGMService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+        <service
+            android:name=".support.service.MusicService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <activity
+            android:name=".ui.WebActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.anchor.AnchorApplyActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 推送 -->
+        <!-- 极光推送 -->
+        <receiver
+            android:name=".support.push.receiver.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </receiver>
+        <!-- 极光推送 -->
+
+        <service
+            android:name="com.talkingdata.sdk.TDAntiCheatingService"
+            android:process="com.talkingdata.sdk.TDAntiCheatingService"> <!-- 用户质量评估Service可以配置在主进程或者单独进程 -->
+            <intent-filter>
+                <action android:name="com.talkingdata.sdk.TDAntiCheatingService"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="F0A83D70F91E4565A9D643EBA3ED5577"/>
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="Android"/>
+
+        <activity
+            android:name=".ui.user.MyRecordListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.user.CouponActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.user.MoreActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.user.TaskActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.user.BindInviteActivity">
+        </activity>
+        <activity android:name=".ui.game.OtherPeopleActivity">
+        </activity>
+        <activity android:name=".ui.shop.JIFenShopActivity">
+        </activity>
+        <activity android:name=".ui.shop.ShopDetailActivity">
+        </activity>
+        <activity android:name=".ui.home.RankActivity">
+        </activity>
+        <activity android:name=".ui.user.AboutActivity">
+        </activity>
+        <activity
+            android:name=".ui.user.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".ui.user.RecordDetailActivity">
+        </activity>
+        <activity android:name=".ui.user.RecordReportActivity">
+        </activity>
+    </application>
+
+</manifest>

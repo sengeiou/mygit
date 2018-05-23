@@ -1,0 +1,88 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_0_black"/>
+            <item android:drawable="@drawable/spinner_0"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_1_black"/>
+            <item android:drawable="@drawable/spinner_1"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_2_black"/>
+            <item android:drawable="@drawable/spinner_2"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_3_black"/>
+            <item android:drawable="@drawable/spinner_3"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_4_black"/>
+            <item android:drawable="@drawable/spinner_4"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_5_black"/>
+            <item android:drawable="@drawable/spinner_5"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_6_black"/>
+            <item android:drawable="@drawable/spinner_6"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_7_black"/>
+            <item android:drawable="@drawable/spinner_7"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_8_black"/>
+            <item android:drawable="@drawable/spinner_8"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_9_black"/>
+            <item android:drawable="@drawable/spinner_9"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_10_black"/>
+            <item android:drawable="@drawable/spinner_10"/>
+        </selector>
+    </item>
+    <item
+        android:duration="60">
+        <selector>
+            <item android:state_enabled="false" android:drawable="@drawable/spinner_11_black"/>
+            <item android:drawable="@drawable/spinner_11"/>
+        </selector>
+    </item>
+</animation-list>

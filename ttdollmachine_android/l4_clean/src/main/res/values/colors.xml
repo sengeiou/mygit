@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#FD745C</color>-->
+    <!--<color name="colorPrimaryDark">#FD745C</color>-->
+
+    <color name="colorPrimary">#3f2ddc</color>
+    <color name="colorPrimaryDark">#3f2ddc</color>
+
+    <color name="colorAccent">#FAD113</color>
+    <color name="font_white">#FFFFFF</color>
+
+    <color name="global_bg">#F4F7F7</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="text_primary">#FF6867</color>
+
+    <color name="challenge_bg_color">#c980ec</color>
+    <color name="text_black">#232323</color>
+    <color name="text_gray">#dedede</color>
+    <color name="red">#e61c1c</color>
+    <color name="font_gray">#939292</color>
+    <color name="translucents">#88000000</color>
+    <color name="color_purple">#6F358B</color>
+    <color name="font_green">#5CD57D</color>
+    <color name="font_blue">#6787EC</color>
+    <color name="dolls_line">#E1E7F2</color>
+    <color name="text_red_depth">#fe7043</color>
+    <color name="text_coin_green">#00c800</color>
+
+    <color name="font_black">#333333</color>
+    <color name="font_gray2">#999999</color>
+
+
+    <color name="base_line">#e0e0e0</color>
+    <color name="font_gray_title">#666666</color>
+    <color name="text_coin_red">#ff5b74</color>
+    <color name="color_price">#6341ef</color>
+
+</resources>

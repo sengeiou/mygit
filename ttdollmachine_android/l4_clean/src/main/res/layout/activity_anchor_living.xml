@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.beanu.l4_clean.ui.anchor.AnchorLivingActivity">
+
+
+    <FrameLayout
+        android:id="@+id/RemoteWindowA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/RemoteGLSurfaceViewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/img_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jiazaitupian"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <SurfaceView
+        android:id="@+id/LocalPreviewSurface"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_anchor_info"/>
+
+    <com.qiniu.pili.droid.streaming.widget.AspectFrameLayout
+        android:id="@+id/cameraPreview_afl"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_anchor_info">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/cameraPreview_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+    </com.qiniu.pili.droid.streaming.widget.AspectFrameLayout>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_anchor_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/people_catch_bg"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img_crawer_avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/base_dafualt_head"/>
+
+        <TextView
+            android:id="@+id/txt_crawer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_crawer_avatar"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/img_crawer_avatar"
+            android:text="姑娘"
+            android:textColor="@color/font_white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/txt_crawer_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txt_crawer_name"
+            android:layout_below="@+id/txt_crawer_name"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="2dp"
+            android:text="热抓中"
+            android:textColor="@color/font_white"
+            android:textSize="10sp"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view_online"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/img_back"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_online_user_avatar">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/recycle_view_online"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_right_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="%s人"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在房间"
+            android:textColor="@color/font_white"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view_message"
+        android:layout_width="0dp"
+        android:layout_height="136dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/RemoteWindowA"
+        app:layout_constraintEnd_toEndOf="@+id/RemoteWindowA"
+        app:layout_constraintStart_toStartOf="@+id/RemoteWindowA"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <ImageView
+        android:id="@+id/img_message_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/RemoteWindowA"
+        app:layout_constraintStart_toStartOf="@+id/RemoteWindowA"
+        app:srcCompat="@drawable/shouqi"/>
+
+    <!--底部控制区域-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_control"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+
+            <Button
+                android:id="@+id/btn_craw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btn_anchor_change_selector"
+                android:orientation="vertical"
+                android:text="换娃娃"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_start_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/btn_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_anchor_helpme_selector"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_helpme"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/circle_red"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/font_white"
+                    android:textSize="10sp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
+
+
+        <include
+            layout="@layout/layout_control_game"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--当前空闲的娃娃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前空闲"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_anchor_choose_dolls">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+    <!--接受 拒绝 帮我抓娃娃-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/layout_bottom_help_list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/board_transparent_black"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/img_help_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_back"
+        app:srcCompat="@drawable/help_me_xuanfu"/>
+
+    <ImageView
+        android:id="@+id/img_help_avatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/img_help_bg"
+        app:layout_constraintStart_toStartOf="@+id/img_help_bg"
+        app:layout_constraintTop_toTopOf="@+id/img_help_bg"
+        app:srcCompat="@drawable/base_head_default"/>
+
+    <TextView
+        android:id="@+id/txt_help_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/font_white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/img_help_bg"
+        app:layout_constraintStart_toStartOf="@+id/img_help_bg"
+        app:layout_constraintTop_toBottomOf="@+id/img_help_avatar"
+        tools:text="TextView"/>
+
+    <TextView
+        android:id="@+id/txt_chat_hit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="170dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/board_round30_ransparent_black"
+        android:paddingBottom="2dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/font_white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="xxxx进来了"/>
+
+    <ImageView
+        android:id="@+id/img_chat_avatar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_chat_hit"
+        app:layout_constraintStart_toStartOf="@+id/txt_chat_hit"
+        app:layout_constraintTop_toTopOf="@+id/txt_chat_hit"
+        app:srcCompat="@drawable/base_dafualt_head"/>
+
+</android.support.constraint.ConstraintLayout>

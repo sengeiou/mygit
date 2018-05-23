@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.beanu.l4_clean.ui.user.MoreActivity">
+
+    <include layout="@layout/arad_toolbar"/>
+
+
+    <View
+        style="@style/base_line_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/rl_item_recharge"
+        style="@style/user_center_item">
+
+        <ImageView
+            android:id="@+id/img_tag3"
+            style="@style/user_center_item_icon"
+            android:src="@drawable/list_chongzhi_11"/>
+
+        <TextView
+            style="@style/user_center_item_title"
+            android:text="充值"/>
+
+        <android.support.v4.widget.Space style="@style/placeholder_horizontal"/>
+
+        <ImageView style="@style/user_center_item_right"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/base_line_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/rl_item_task"
+        style="@style/user_center_item">
+
+        <ImageView
+            style="@style/user_center_item_icon"
+            android:src="@drawable/list_renwu"/>
+
+        <TextView
+            style="@style/user_center_item_title"
+            android:text="任务中心"/>
+
+        <android.support.v4.widget.Space style="@style/placeholder_horizontal"/>
+
+        <ImageView style="@style/user_center_item_right"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/base_line_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/rl_item_notice"
+        style="@style/user_center_item">
+
+        <ImageView
+            style="@style/user_center_item_icon"
+            android:src="@drawable/list_inform"/>
+
+        <TextView
+            style="@style/user_center_item_title"
+            android:text="通知中心"/>
+
+        <android.support.v4.widget.Space style="@style/placeholder_horizontal"/>
+
+        <ImageView style="@style/user_center_item_right"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/base_line_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/rl_item_invite"
+        style="@style/user_center_item">
+
+        <ImageView
+            style="@style/user_center_item_icon"
+            android:src="@drawable/list_jiangli"/>
+
+        <TextView
+            style="@style/user_center_item_title"
+            android:text="邀请奖励"/>
+
+        <android.support.v4.widget.Space style="@style/placeholder_horizontal"/>
+
+        <ImageView style="@style/user_center_item_right"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/base_line_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/rl_item_daichong"
+        style="@style/user_center_item"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/user_center_item_icon"
+            android:src="@drawable/list_daichong"/>
+
+        <TextView
+            style="@style/user_center_item_title"
+            android:text="找人代充"/>
+
+        <android.support.v4.widget.Space style="@style/placeholder_horizontal"/>
+
+        <ImageView style="@style/user_center_item_right"/>
+
+    </LinearLayout>
+
+</LinearLayout>

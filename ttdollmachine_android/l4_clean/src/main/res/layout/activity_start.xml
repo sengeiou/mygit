@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/loading">
+
+
+    <ImageView
+        android:id="@+id/img_splash_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:id="@+id/btn_jump_over"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/btn_round_black_alpha"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom|center_horizontal"
+        android:keepScreenOn="true"
+        android:text="@string/app_name"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+</FrameLayout>

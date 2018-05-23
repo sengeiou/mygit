@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.beanu.l4_clean.ui.user.ShareActivity">
+
+
+    <include layout="@layout/arad_toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/board_round5_white"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="我的邀请码"/>
+
+        <LinearLayout
+            android:id="@+id/layout_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_title"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_code1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/number"
+                android:gravity="center"
+                android:textColor="@color/font_white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:text="6"/>
+
+            <TextView
+                android:id="@+id/txt_code2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/number"
+                android:gravity="center"
+                android:textColor="@color/font_white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:text="6"/>
+
+            <TextView
+                android:id="@+id/txt_code3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/number"
+                android:gravity="center"
+                android:textColor="@color/font_white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:text="6"/>
+
+            <TextView
+                android:id="@+id/txt_code4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/number"
+                android:gravity="center"
+                android:textColor="@color/font_white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:text="6"/>
+
+            <TextView
+                android:id="@+id/txt_code5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/number"
+                android:gravity="center"
+                android:textColor="@color/font_white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:text="6"/>
+
+            <TextView
+                android:id="@+id/txt_code6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/number"
+                android:gravity="center"
+                android:textColor="@color/font_white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:text="6"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_number"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:text="每邀请一位好友，双方均可获得30币 \n
+邀请上限为10名，最高可得300币"/>
+
+
+        <Button
+            android:id="@+id/btn_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_tips"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button"
+            android:onClick="onClickShare"
+            android:text="分享邀请码"
+            android:textColor="@color/font_white"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_invite"
+            android:text="我已邀请%s名好友"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

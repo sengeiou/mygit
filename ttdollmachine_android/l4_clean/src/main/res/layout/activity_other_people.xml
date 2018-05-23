@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.beanu.l4_clean.ui.game.OtherPeopleActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/arad_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            ptr:contentInsetEnd="0dp"
+            ptr:contentInsetStart="0dp">
+
+
+            <ImageView
+                android:id="@+id/toolbar_left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/a_back_1"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/arad_actionbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/toolbar_right_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:text="编辑"/>
+
+            <ImageView
+                android:id="@+id/toolbar_right_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/share_title"
+                android:visibility="gone"/>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/arad_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:ptr_duration_to_close="300"
+            ptr:ptr_duration_to_close_header="1000"
+            ptr:ptr_keep_header_when_refresh="true"
+            ptr:ptr_pull_to_fresh="false"
+            ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            ptr:ptr_resistance="1.7">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

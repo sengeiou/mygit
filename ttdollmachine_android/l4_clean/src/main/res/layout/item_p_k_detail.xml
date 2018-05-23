@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/text_scene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#959898"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="第一局"/>
+
+    <ImageView
+        android:id="@+id/zhuangshi"
+        android:layout_width="145dp"
+        android:layout_height="60dp"
+        android:src="@drawable/zhuangshi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_scene"/>
+
+    <ImageView
+        android:id="@+id/img_winner_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/base_head_default"
+        app:layout_constraintBottom_toBottomOf="@id/zhuangshi"
+        app:layout_constraintLeft_toLeftOf="@id/zhuangshi"
+        app:layout_constraintRight_toRightOf="@id/zhuangshi"/>
+
+    <ImageView
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/wangnguan"
+        app:layout_constraintBottom_toBottomOf="@id/img_winner_avatar"
+        app:layout_constraintLeft_toLeftOf="@id/img_winner_avatar"/>
+
+    <TextView
+        android:id="@+id/text_win_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/zhuangshi"
+        tools:text="XX获胜"/>
+
+    <LinearLayout
+        android:id="@+id/prize_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_win_title">
+
+        <ImageView
+            android:id="@+id/prize_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/jinbi"/>
+
+        <TextView
+            android:id="@+id/prize_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="#333e8b"
+            android:textSize="12sp"
+            tools:text="抓到一只熊"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_win_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/gold_many"
+        android:drawablePadding="8dp"
+        android:text="获得100开心币奖励"
+        android:textColor="#333e8b"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prize_container"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_pk_content_bg"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_win_content">
+
+
+        <ImageView
+            android:id="@+id/my_img"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/base_head_default"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/my_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="我抓了3次"
+            android:textColor="#959898"
+            app:layout_constraintEnd_toEndOf="@id/my_img"
+            app:layout_constraintStart_toStartOf="@id/my_img"
+            app:layout_constraintTop_toBottomOf="@id/my_img"/>
+
+        <ImageView
+            android:id="@+id/other_img"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/base_head_default"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/other_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="XXX抓了3次"
+            android:textColor="#959898"
+            app:layout_constraintEnd_toEndOf="@id/other_img"
+            app:layout_constraintStart_toStartOf="@id/other_img"
+            app:layout_constraintTop_toBottomOf="@id/other_img"/>
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

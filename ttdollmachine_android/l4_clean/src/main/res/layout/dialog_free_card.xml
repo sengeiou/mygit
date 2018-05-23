@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pop_up_all"/>
+
+    <TextView
+        android:id="@+id/txt_1"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="稍后使用"
+        android:textColor="@color/font_gray"
+        app:layout_constraintBottom_toBottomOf="@id/img_bg"
+        app:layout_constraintEnd_toStartOf="@+id/txt_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/img_bg"
+        />
+
+    <TextView
+        android:id="@+id/txt_2"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="继续抓取"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_1"
+        app:layout_constraintEnd_toEndOf="@id/img_bg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_1"
+        app:layout_constraintTop_toTopOf="@+id/txt_1"/>
+
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:lineSpacingExtra="4dp"
+        android:text="您还有%s张免费卡未使用，\n每日登录赠送的10张免费卡\n仅限当天使用"
+        android:textAlignment="center"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/img_bg"
+        app:layout_constraintStart_toStartOf="@id/img_bg"
+        app:layout_constraintTop_toTopOf="@id/img_bg"/>
+
+    <RadioButton
+        android:id="@+id/txt_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="我已经了解游戏规则，不再提示"
+        android:textColor="@color/font_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_2"
+        app:layout_constraintEnd_toEndOf="@id/img_bg"
+        app:layout_constraintStart_toStartOf="@id/img_bg"/>
+
+
+</android.support.constraint.ConstraintLayout>
