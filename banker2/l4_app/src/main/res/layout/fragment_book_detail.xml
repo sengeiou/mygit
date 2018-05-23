@@ -1,0 +1,114 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context="com.beanu.l4_bottom_tab.ui.module4_book.BookDetailFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v4.view.ViewPager>
+
+           <!-- <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/page_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:padding="8dp"
+                app:fillColor="@color/color_green"
+                app:pageColor="@color/base_line"
+                app:radius="3dp"
+                />-->
+        </RelativeLayout>
+
+        <View
+            style="@style/base_line_horizontal"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txt_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="农村信用社公共弄功能基础知识"
+                android:textColor="@color/base_font_black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/txt_book_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txt_book_name"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/yancy_red700"
+                tools:text="¥29.5"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/txt_book_express"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txt_book_price"
+                android:layout_marginTop="6dp"
+                android:text="快递：0.00"
+                android:textColor="@color/base_font_gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txt_book_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_book_express"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:layout_toEndOf="@+id/txt_book_express"
+                android:layout_toRightOf="@+id/txt_book_express"
+                android:text="销售额：4554"
+                android:textColor="@color/base_font_gray"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/item_comment_header"/>
+
+
+        <View style="@style/base_line_horizontal"/>
+
+        <com.beanu.arad.widget.LinearLayoutForListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </com.beanu.arad.widget.LinearLayoutForListView>
+    </LinearLayout>
+</ScrollView>

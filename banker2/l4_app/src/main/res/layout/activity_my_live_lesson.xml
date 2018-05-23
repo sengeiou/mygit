@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.beanu.l4_bottom_tab.ui.module5_my.live_lesson.MyLiveLessonActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@drawable/toolbar_bg"
+        android:paddingTop="25dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+
+        <ImageView
+            android:id="@+id/toolbar_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:src="@drawable/ic_back"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/arad_actionbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/toolbar_right_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="课程表"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--TAB 按钮控件-->
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+            </TabWidget>
+
+            <!--为了解决某个BUG-->
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+
+            </FrameLayout>
+
+            <!--TAB 内容显示区-->
+            <FrameLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@android:id/tabs">
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.app.FragmentTabHost>
+</LinearLayout>

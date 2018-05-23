@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:id="@+id/frame_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@drawable/toolbar_bg"
+            android:paddingTop="25dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:tabGravity="center">
+
+                </android.support.design.widget.TabLayout>
+
+                <ImageView
+                    android:id="@+id/toolbar_left_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:src="@drawable/ic_back"/>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </android.support.v4.view.ViewPager>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <View style="@style/base_line_horizontal"/>
+
+            <TextView
+                android:id="@+id/txt_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/shopping_cart_gray"
+                android:text="购物车"
+                android:visibility="gone"
+                android:textColor="@color/base_font_small"
+                android:textSize="10sp"/>
+
+
+            <TextView
+                android:id="@+id/txt_cart_num"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignEnd="@+id/txt_cart"
+                android:layout_alignRight="@+id/txt_cart"
+                android:layout_alignTop="@+id/txt_cart"
+                android:background="@drawable/cart_num"
+                android:gravity="center"
+                tools:text="5"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/btn_to_car"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/base_color_orange"
+                android:text="购买"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <com.gensee.view.GSVideoView
+        android:id="@+id/imvideoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"/>
+
+
+    <ImageView
+        android:id="@+id/img_only_audio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1a1a1a"
+        android:src="@drawable/audio_default_content"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/progress_video_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/loading_progressbar148x148"
+        android:visibility="visible"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#50000000"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_video_more"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_right_pane"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_toolbar"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="8dp">
+
+        <RelativeLayout
+            android:id="@+id/txtHandRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_video_more_yuan"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp">
+
+            <ImageButton
+                android:id="@+id/txtHand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:src="@drawable/ic_video_more_hand_white"/>
+
+            <TextView
+                android:id="@+id/txtHand_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/txtHand"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="50s"/>
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/txtVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            android:enabled="false"
+            android:src="@drawable/ic_video_video"
+            />
+
+        <ImageButton
+            android:id="@+id/txtFullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            android:enabled="false"
+            android:src="@drawable/ic_video_full"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/txtAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:enabled="false"
+        android:text="@string/audio_close"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/txtMic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtAudio"
+        android:text="@string/mic_close"
+        android:visibility="gone"/>
+
+
+    <Spinner
+        android:id="@+id/spinnerRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/txtIdc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerRate"
+        android:enabled="false"
+        android:text="@string/idcSwitch"
+        android:visibility="gone"/>
+
+</RelativeLayout>

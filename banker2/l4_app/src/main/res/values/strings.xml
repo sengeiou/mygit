@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">银行人</string>
+
+    <string name="tab_title_1">题库</string>
+    <string name="tab_title_2">直播课</string>
+    <string name="tab_title_3">高清网课</string>
+    <string name="tab_title_4">图书</string>
+    <string name="tab_title_5">我的</string>
+
+    <!--错误提示信息-->
+    <string name="code002">账号已经存在</string>
+    <string name="code005">账号已被禁用</string>
+    <string name="code006">账号密码错误</string>
+
+    <string name="camera_open_error">启动相机失败</string>
+    <string name="not_specify_a_directory">未指定存储目录</string>
+    <string name="help">帮助</string>
+    <string name="help_content">当前权限被禁用，建议到设置界面开启权限!</string>
+    <string name="cancel">取消</string>
+    <string name="settings">设置</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_book_detail">BookDetailActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+</resources>

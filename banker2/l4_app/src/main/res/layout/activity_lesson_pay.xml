@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.beanu.l4_bottom_tab.ui.common.LessonPayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/arad_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--收货地址-->
+                <RelativeLayout
+                    android:id="@+id/rl_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cart_white"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/cart_img_address_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cart_books_location"/>
+
+                    <TextView
+                        android:id="@+id/cart_txt_address_userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/cart_img_address_tag"
+                        android:text="收货地址"
+                        android:textColor="@color/cart_font_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/cart_txt_address_userPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/cart_txt_address_userName"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/cart_txt_address_userName"
+                        android:textColor="@color/cart_font_black"
+                        android:textSize="14sp"
+                        tools:text="18560232016"/>
+
+                    <TextView
+                        android:id="@+id/cart_txt_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/cart_txt_address_userName"
+                        android:layout_below="@id/cart_txt_address_userName"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/cart_font_gray"
+                        android:textSize="13sp"
+                        tools:text="山东省济南市高新区"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_right"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/txt_order_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:textColor="@color/text_black"
+                        tools:text="中欧农业银行直播课"/>
+
+                    <TextView
+                        android:id="@+id/txt_order_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_order_title"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/base_font_gray"
+                        android:textSize="12sp"
+                        tools:text="上课时间：2017.03.21-2017.03.22"/>
+
+                    <TextView
+                        android:id="@+id/txt_order_teachers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/txt_order_time"
+                        android:layout_marginTop="8dp"
+                        android:text="授课老师：小李，白纸"
+                        android:textColor="@color/base_font_gray"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/base_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cart_white"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="课程价格"
+                        android:textColor="@color/base_font_gray"
+                        android:textSize="12sp"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥29.90"
+                        android:textColor="@color/cart_primary"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!--备注-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="备注"/>
+
+                <EditText
+                    android:id="@+id/edit_mark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_board"
+                    android:gravity="left"
+                    android:hint="请输入想说的话"
+                    android:minHeight="50dp"
+                    android:padding="8dp"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14sp"/>
+
+                <!--支付方式-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="选择支付方式"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlAli"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/cart_white">
+
+                    <ImageView
+                        android:id="@+id/ivAli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/cart_ic_alipay"/>
+
+                    <RadioButton
+                        android:id="@+id/cbAli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:button="@drawable/cart_checkbox_selector"
+                        android:checked="true"
+                        android:clickable="false"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/cbAli"
+                        android:layout_toRightOf="@+id/ivAli"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAli"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="支付宝支付"
+                            android:textColor="@color/cart_font_black"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tvAliHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="推荐支付宝用户使用"
+                            android:textColor="@color/cart_font_gray"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/cart_line"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlWeixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/cart_white">
+
+                    <ImageView
+                        android:id="@+id/ivWeixin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/cart_ic_weixin"/>
+
+                    <RadioButton
+                        android:id="@+id/cbWeixin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:button="@drawable/cart_checkbox_selector"
+                        android:clickable="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/cbWeixin"
+                        android:layout_toRightOf="@+id/ivWeixin"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvWeixin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="微信支付"
+                            android:textColor="@color/cart_font_black"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tvWeixinHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="微信支付,无需开通网银"
+                            android:textColor="@color/cart_font_gray"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_cart_pay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cart_primary"
+        android:gravity="center"
+        android:text="支付"
+        android:textColor="@color/cart_white"
+        android:textSize="16sp"/>
+</RelativeLayout>

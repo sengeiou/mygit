@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_item_course"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp">
+
+
+    <ImageView
+        android:id="@+id/img_item_course_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/home_page_close_up"/>
+
+
+    <TextView
+        android:id="@+id/txt_item_course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_item_course_tag"
+        android:textColor="@color/base_font_black"
+        tools:text="公共基础"/>
+
+    <RatingBar
+        android:id="@+id/rate_item_course_progress"
+        style="@style/RatingBarLeaf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_item_course_name"
+        android:layout_below="@id/txt_item_course_name"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:isIndicator="true"
+        android:numStars="5"/>
+
+    <TextView
+        android:id="@+id/txt_item_course_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/rate_item_course_progress"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/rate_item_course_progress"
+        android:textColor="@color/base_font_gray"
+        android:textSize="12sp"
+        tools:text="32/564"/>
+
+    <View
+        android:id="@+id/line_bottom"
+        style="@style/base_line_horizontal"
+        android:layout_alignLeft="@id/rate_item_course_progress"
+        android:layout_below="@id/rate_item_course_progress"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line_bottom"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/txt_item_course_progress">
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right"/>
+
+        <TextView
+            android:id="@+id/txt_go_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/img_arrow"
+            android:text="继续上次"
+            android:textColor="@color/color_green"
+            android:textSize="12sp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

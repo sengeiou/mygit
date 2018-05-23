@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.beanu.l3_login"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity android:name=".ui.LoginActivity">
+        </activity>
+        <activity android:name=".ui.RegisterActivity">
+        </activity>
+        <activity android:name=".SignIn2Activity">
+        </activity>
+        <activity android:name=".ui.Register2Activity"/>
+        <activity android:name=".ui.Register3Activity"/>
+        <activity android:name=".SignInActivity"/>
+        <activity android:name=".ui.FindPwdActivity">
+        </activity>
+    </application>
+
+</manifest>

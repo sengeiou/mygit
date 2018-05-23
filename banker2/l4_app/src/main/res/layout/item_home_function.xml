@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="horizontal"
+              android:paddingBottom="8dp"
+              android:paddingTop="8dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_item_home_function_practice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/home_page_capacity"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="智能练习"
+            android:textColor="@color/base_font_black"
+            android:textSize="13sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_item_home_function_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/home_page_message"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="资讯指南"
+            android:textColor="@color/base_font_black"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

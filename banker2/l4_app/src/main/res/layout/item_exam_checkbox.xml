@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox android:id="@+id/checkbox_item"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@null"
+          android:button="@null"
+          android:drawableLeft="@drawable/exam_checkbox_a"
+          android:drawablePadding="12dp"
+          android:padding="16dp"
+          android:textSize="15sp"
+          tools:text="我是一个多选">
+
+</CheckBox>

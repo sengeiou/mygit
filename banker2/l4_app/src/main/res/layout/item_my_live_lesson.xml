@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/card_background">
+
+
+    <ImageView
+        android:id="@+id/img_teacher"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/default_img"/>
+
+    <TextView
+        android:id="@+id/txt_teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/img_teacher"
+        android:layout_alignStart="@+id/img_teacher"
+        android:layout_below="@+id/img_teacher"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/base_font_small"
+        android:textSize="12sp"
+        tools:text="李佳佳"/>
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_teacher"
+        android:layout_marginEnd="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/img_teacher"
+        android:layout_toRightOf="@+id/img_teacher"
+        android:textColor="@color/base_font_black"
+        android:textSize="16sp"
+        tools:text="职业能力倾向测试+综合应用能力6班"/>
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_title"
+        android:layout_alignStart="@+id/txt_title"
+        android:layout_below="@+id/txt_title"
+        android:layout_marginTop="4dp"
+        android:drawableLeft="@drawable/tv_time"
+        android:drawablePadding="4dp"
+        android:textColor="@color/base_font_small"
+        android:textSize="12sp"
+        tools:text="2017.03.11-2017.03.28"/>
+
+    <ImageView
+        android:id="@+id/img_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/syllabus_label_grey"/>
+
+    <TextView
+        android:id="@+id/txt_buyer_num"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/base_background_gradient"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="已有4512人购买"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+
+        <View
+            style="@style/base_line_horizontal"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/txt_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/syllabus_liuyan_s"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:textColor="@color/base_font_small"
+            android:textSize="10sp"
+            tools:text="489"/>
+
+        <TextView
+            android:id="@+id/txt_look_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/txt_comment_num"
+            android:drawableLeft="@drawable/syllabus_kan_s"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:textColor="@color/base_font_small"
+            android:textSize="10sp"
+            tools:text="589"/>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@null"
+        app:srcCompat="@drawable/syllabus_grey_bf"/>
+</RelativeLayout>

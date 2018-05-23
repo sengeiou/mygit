@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/txt_live_lesson_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是标题"
+            android:textColor="@color/base_font_black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/txt_live_lesson_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/tv_time"
+                android:drawablePadding="4dp"
+                android:text="2017.03.08-2017.04.01"
+                android:textColor="@color/base_font_gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txt_live_lesson_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:drawableLeft="@drawable/tv_remain"
+                android:drawablePadding="4dp"
+                android:text="距离停售10天"
+                android:textColor="@color/base_font_gray"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_live_lesson_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="9dp"
+                android:text="¥199"
+                android:textColor="@color/base_font_red"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txt_live_lesson_buyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txt_live_lesson_price"
+                android:layout_marginTop="8dp"
+                android:text="已有432人购买"
+                android:textColor="@color/base_font_gray"
+                android:textSize="12sp"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow_right"
+        />
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.beanu.l4_bottom_tab.ui.module5_my.info.FeedbackActivity">
+
+    <include layout="@layout/arad_toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/feedback_bg"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="0/15"
+            android:textColor="@color/text_gray"
+            />
+
+        <EditText
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:hint="请简要表述问题的标题"
+            android:maxLength="15"
+            android:minHeight="32dp"
+            android:textColorHint="@color/base_font_gray"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/feedback_bg"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/txt_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="0/150"
+            android:textColor="@color/text_gray"
+            />
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:gravity="start"
+            android:hint="请添加问题详细描述..."
+            android:maxLength="150"
+            android:minHeight="220dp"
+            android:textColorHint="@color/base_font_gray"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/base_btn_default"
+        android:enabled="false"
+        android:text="提交"
+        android:textColor="#FFFFFF"
+
+        />
+</LinearLayout>

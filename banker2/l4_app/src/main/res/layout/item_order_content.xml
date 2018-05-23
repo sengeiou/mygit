@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/img_order_item"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/default_img"/>
+
+    <TextView
+        android:id="@+id/txt_order_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/img_order_item"
+        android:layout_toRightOf="@+id/img_order_item"
+        android:textColor="@color/base_font_black"
+        tools:text="会计要素和会计恒等式"/>
+
+    <TextView
+        android:id="@+id/txt_order_item_sku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_order_item_title"
+        android:layout_alignStart="@+id/txt_order_item_title"
+        android:layout_below="@+id/txt_order_item_title"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        tools:text="精品课堂（12节）"/>
+
+    <TextView
+        android:id="@+id/txt_order_item_sku2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_order_item_sku"
+        android:layout_alignStart="@+id/txt_order_item_sku"
+        android:layout_below="@+id/txt_order_item_sku"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@+id/txt_order_item_price"
+        android:text="授课老师（小莉，白芷）"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/txt_order_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_order_item_sku2"
+        android:layout_alignBottom="@+id/txt_order_item_sku2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="¥45.50"
+        android:textColor="@color/base_font_red"/>
+
+    <TextView
+        android:id="@+id/txt_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txt_order_item_sku"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/btn_order_pay"
+        android:gravity="right"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="评价"
+        android:textColor="@color/btn_order_pay"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

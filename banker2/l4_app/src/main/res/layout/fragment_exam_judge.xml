@@ -1,0 +1,149 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context="com.beanu.l4_bottom_tab.ui.module1_exam.ExamJudgeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_exam_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2015年山东信用社笔试模拟题"/>
+
+            <TextView
+                android:id="@+id/txt_exam_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="0/40"
+                />
+        </RelativeLayout>
+
+        <!--空格-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@color/background"
+            />
+
+        <!--题干-->
+        <TextView
+            android:id="@+id/txt_exam_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColor="@color/base_font_black"
+            android:textSize="15sp"
+            tools:text="[判断题] 在银行的资产负债表中，客户存款属于："/>
+
+        <!--选项-->
+        <RadioGroup
+            android:id="@+id/radio_group_exam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_button_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/exam_judge_right"
+                android:drawablePadding="12dp"
+                android:padding="16dp"
+                android:text="正确"
+                android:textSize="15sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_wrong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/exam_judge_wrong"
+                android:drawablePadding="12dp"
+                android:padding="16dp"
+                android:text="错误"
+                android:textSize="15sp"/>
+
+        </RadioGroup>
+
+        <!--解析-->
+        <LinearLayout
+            android:id="@+id/ll_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[解析]"
+                android:textColor="@color/base_font_gray"/>
+
+            <TextView
+                android:id="@+id/txt_analysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/base_font_black"
+                android:textSize="15sp"
+                tools:text="我是解析的内容"/>
+        </LinearLayout>
+
+        <!--笔记-->
+        <LinearLayout
+            android:id="@+id/ll_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[笔记]"
+                android:textColor="@color/base_font_gray"/>
+
+            <TextView
+                android:id="@+id/txt_note_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/base_font_black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txt_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="添加笔记"
+                android:textColor="@color/color_green"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

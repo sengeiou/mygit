@@ -1,0 +1,13 @@
+<manifest package="com.beanu.l3_common"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="27"/>
+
+    <application>
+
+    </application>
+
+</manifest>

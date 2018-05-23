@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">L3_Login</string>
+
+    <string name="register_tips">短信验证码已发送到%s，请查收.</string>
+</resources>

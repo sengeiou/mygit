@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@drawable/toolbar_bg"
+        android:paddingTop="25dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+
+        <ImageView
+            android:id="@+id/toolbar_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:src="@drawable/ic_back"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/arad_actionbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp">
+
+            <ImageView
+                android:id="@+id/toolbar_right_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shopping_cart"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txt_cart_num"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignEnd="@+id/toolbar_right_btn1"
+                android:layout_alignRight="@+id/toolbar_right_btn1"
+                android:layout_alignTop="@+id/toolbar_right_btn1"
+                android:background="@drawable/cart_num"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:visibility="gone"
+                tools:text="5"/>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.yyydjk.library.DropDownMenu
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dddividerColor="@color/base_line"
+        app:ddmaskColor="@color/mask_color"
+        app:ddmenuBackgroundColor="@color/white"
+        app:ddmenuSelectedIcon="@drawable/books_upward"
+        app:ddmenuTextSize="13sp"
+        app:ddmenuUnselectedIcon="@drawable/books_downward"
+        app:ddtextSelectedColor="@color/color_green"
+        app:ddtextUnselectedColor="@color/drop_down_unselected"
+        app:ddunderlineColor="@color/base_line">
+
+    </com.yyydjk.library.DropDownMenu>
+
+
+</LinearLayout>

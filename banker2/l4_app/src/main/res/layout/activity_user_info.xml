@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.beanu.l4_bottom_tab.ui.module5_my.info.UserInfoActivity">
+
+    <include layout="@layout/arad_toolbar2"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_item_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/p1_single_line_pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/head_portrait0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/p1_single_line_pt"
+            android:text="头像"
+            android:textColor="@color/base_font_black"
+            android:textSize="14sp"/>
+
+
+        <ImageView
+            android:id="@+id/p1_single_line_pttp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_right"/>
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/p1_single_line_pttp"
+            android:src="@drawable/head_portrait"
+            />
+
+        <View
+            style="@style/base_line_horizontal"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_item_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+
+
+        <ImageView
+            android:id="@+id/p2_single_line_ptt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/name0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/p2_single_line_ptt"
+            android:text="昵称"
+            android:textColor="@color/base_font_black"
+            android:textSize="14sp"/>
+
+
+        <ImageView
+            android:id="@+id/p2_single_line_pttp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_right"/>
+
+        <TextView
+            android:id="@+id/txt_nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/p2_single_line_pttp"
+            android:textColor="#777"
+            android:textSize="12sp"
+            tools:text="小糯米"/>
+
+        <View
+            style="@style/base_line_horizontal"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <!--性别-->
+    <RelativeLayout
+        android:id="@+id/rl_item_sex"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+
+
+        <ImageView
+            android:id="@+id/p2_single_line_ptt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/user_sex"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/p2_single_line_ptt1"
+            android:text="性别"
+            android:textColor="@color/base_font_black"
+            android:textSize="14sp"/>
+
+
+        <ImageView
+            android:id="@+id/p2_single_line_pttp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_right"/>
+
+        <TextView
+            android:id="@+id/txt_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/p2_single_line_pttp3"
+            android:textColor="#777"
+            android:textSize="12sp"
+            tools:text="男"/>
+
+        <View
+            style="@style/base_line_horizontal"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <!--学校-->
+    <RelativeLayout
+        android:id="@+id/rl_item_school"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+
+
+        <ImageView
+            android:id="@+id/p2_single_line_ptt11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/user_school"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/p2_single_line_ptt11"
+            android:text="学校"
+            android:textColor="@color/base_font_black"
+            android:textSize="14sp"/>
+
+
+        <ImageView
+            android:id="@+id/p2_single_line_pttp33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_right"/>
+
+        <TextView
+            android:id="@+id/txt_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/p2_single_line_pttp33"
+            android:textColor="#777"
+            android:textSize="12sp"
+            tools:text="山东大学"/>
+
+        <View
+            style="@style/base_line_horizontal"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/p3_single_line_ptt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/nickname0"/>
+
+        <TextView
+            android:id="@+id/t3_single_line_ptt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/p3_single_line_ptt"
+            android:textColor="@color/base_font_black"
+            android:textSize="14sp"
+            tools:text="考试类别"/>
+
+
+        <ImageView
+            android:id="@+id/p3_single_line_pttp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/arrow_right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/p3_single_line_pttp"
+            android:textColor="#777"
+            android:textSize="12sp"
+            tools:text="银监会"/>
+
+        <View
+            style="@style/base_line_horizontal"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_item_sign"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/p4_single_line_pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/plane0"/>
+
+        <TextView
+            android:id="@+id/txt_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/p4_single_line_pt"
+            android:text="个性签名"
+            android:textColor="@color/base_font_black"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/edit_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_sign"
+            android:layout_margin="16dp"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="这个家伙很懒，什么都没有写"
+            android:minHeight="100dp"
+            android:textSize="12sp"
+            />
+
+        <View
+            style="@style/base_line_horizontal"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

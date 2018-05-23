@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/txt_exam_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/base_font_black"
+        tools:text="2015年山东信用社笔试真题"/>
+
+    <TextView
+        android:id="@+id/txt_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_exam_title"
+        android:layout_alignStart="@+id/txt_exam_title"
+        android:layout_below="@+id/txt_exam_title"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/base_font_small"
+        android:textSize="12sp"
+        android:text="难度"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_difficulty"
+        android:layout_alignTop="@+id/txt_difficulty"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_toRightOf="@+id/txt_difficulty"/>
+
+    <TextView
+        android:id="@+id/txt_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ratingBar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/ratingBar"
+        android:layout_toRightOf="@+id/ratingBar"
+        android:textColor="@color/base_font_small"
+        android:textSize="12sp"
+        tools:text="0/123"/>
+
+    <TextView
+        android:id="@+id/txt_already_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_progress"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/txt_progress"
+        android:layout_toRightOf="@+id/txt_progress"
+        android:textColor="@color/base_font_small"
+        android:textSize="12sp"
+        tools:text="1234人已作答"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/answer0"/>
+
+    <View
+        style="@style/base_line_vertical"
+        android:layout_width="1dp"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/imageView2"/>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tv_single_video_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="银行从业考试个人理财真题讲解（1）"
+        android:textColor="#333333"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#a8a8a8"
+        android:textSize="12sp"
+        tools:text="2.15  08:00-08:45"/>
+
+
+</LinearLayout>

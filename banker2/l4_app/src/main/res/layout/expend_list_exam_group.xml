@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/item_exam_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:id="@+id/item_exam_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_exam_img"
+        android:text="银行"/>
+
+
+    <ImageView
+        android:id="@+id/item_exam_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"/>
+
+    <RadioButton
+        android:id="@+id/item_exam_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/radio_subject_selector"
+        android:clickable="false"
+        android:focusable="false"/>
+
+</RelativeLayout>

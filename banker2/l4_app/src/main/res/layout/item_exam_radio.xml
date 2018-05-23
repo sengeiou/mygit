@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton android:id="@+id/radio_button"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@null"
+             android:button="@null"
+             android:drawableLeft="@drawable/exam_radio_a"
+             android:drawablePadding="12dp"
+             android:padding="16dp"
+             android:textSize="15sp"
+             tools:text="我是一个单选">
+
+</RadioButton>

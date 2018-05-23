@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:id="@+id/relativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background">
+
+    <ImageView
+        android:id="@+id/img_online_lesson_content"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/txt_online_lesson_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_online_lesson_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:textColor="@color/base_font_black"
+        tools:text="职业能力测试-分析推理"/>
+
+    <TextView
+        android:id="@+id/txt_online_lesson_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_online_lesson_title"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="1:31分钟·41.4K次观看"
+        android:textColor="@color/base_font_gray"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/txt_online_lesson_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_online_lesson_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="¥199"/>
+
+    <ImageView
+        android:id="@+id/img_online_lesson_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/free_class"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txt_online_lesson_title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-14dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/online_classes_paly2"/>
+
+</RelativeLayout>
+

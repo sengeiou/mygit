@@ -1,0 +1,60 @@
+<manifest package="com.beanu.l3_gensee"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash"/>
+
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <application
+        android:installLocation="preferExternal"
+        android:largeHeap="true">
+        <!--<activity-->
+            <!--android:name=".playerdemo.VideoActivity"-->
+            <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+            <!--android:launchMode="singleTask"-->
+            <!--android:screenOrientation="landscape"-->
+            <!--android:windowSoftInputMode="adjustResize|stateHidden">-->
+
+        <!--</activity>-->
+        <activity
+            android:name=".playerdemo.PlayerDemoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize|stateHidden">
+
+        </activity>
+
+        <service
+            android:name=".playerdemo.LogCatService"
+            android:process=":message">
+        </service>
+
+        <activity
+            android:name=".voddemo.VodActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".voddemo.PlayActivity"
+            android:configChanges="orientation|screenLayout|screenSize"
+            android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".playerdemo.MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,2 @@
+include ':arad', ':l2_recycleview', ':l2_shareutil', ':l2_pay', ':l2_zxing', ':l2_im', ':l2_imageselector', ':l4_app', ':l3_materialcalendar', ':l3_common', ':l3_login', ':l3_guide', ':l3_shoppingcart', ':l3_gensee', ':l3_gensee_rtmp', ':l3_search'
+include ':l3_cc_drm'

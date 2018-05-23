@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.beanu.l4_bottom_tab.ui.module_news.PickerProvinceActivity">
+
+    <include layout="@layout/arad_toolbar"/>
+
+    <me.yokeyword.indexablerv.IndexableLayout
+        android:id="@+id/index_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:indexBar_background="#10000000"
+        app:indexBar_layout_width="24dp"
+        app:indexBar_selectedTextColor="#f33737"
+        app:indexBar_textColor="#000000"
+        app:indexBar_textSize="13sp"
+        app:indexBar_textSpace="8dp"
+        />
+
+</LinearLayout>
