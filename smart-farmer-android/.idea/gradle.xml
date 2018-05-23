@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:\Program Files\android-studio\gradle\gradle-4.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/l2_im" />
+            <option value="$PROJECT_DIR$/l2_imageselector" />
+            <option value="$PROJECT_DIR$/l2_pay" />
+            <option value="$PROJECT_DIR$/l2_push" />
+            <option value="$PROJECT_DIR$/l2_recyclerview" />
+            <option value="$PROJECT_DIR$/l2_shareutil" />
+            <option value="$PROJECT_DIR$/l2_zxing" />
+            <option value="$PROJECT_DIR$/l3_common" />
+            <option value="$PROJECT_DIR$/l3_guide" />
+            <option value="$PROJECT_DIR$/l3_login" />
+            <option value="$PROJECT_DIR$/l3_post" />
+            <option value="$PROJECT_DIR$/l3_search" />
+            <option value="$PROJECT_DIR$/l3_shoppingcart" />
+            <option value="$PROJECT_DIR$/l4_bottom_tab" />
+            <option value="$PROJECT_DIR$/l4_clean" />
+            <option value="$PROJECT_DIR$/l4_drawer_navigation" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
